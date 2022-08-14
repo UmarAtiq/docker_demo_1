@@ -32,3 +32,7 @@ on:
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+        on:
+  push:
+    tags:
+      - "v*.*.*"
